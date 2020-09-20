@@ -74,7 +74,7 @@ const Status: React.FC = () => {
   const sendMenssageAndBack = useCallback(() => {
     handleMenssage();
     goBack();
-  }, []);
+  }, [handleMenssage, goBack]);
 
   return (
     <Container>
