@@ -30,6 +30,9 @@
 <p> :heavy_check_mark: &nbsp Gerenciamento das etapas do processo seletivo e feedbacks relativos a etapas </p>
 <p> :heavy_check_mark: &nbsp Broadcast enviado ao número do whatsapp do candidato a cada alteração no status da vaga, próximas etapas e feedbacks </p>
 
+## ⚙ Acesso a plataforma
+[Clique aqui](https://friendly-poincare-9e8d11.netlify.app/)
+
 ## :construction: Requerimentos 
  
 - [Git](https://git-scm.com/)
