@@ -69,7 +69,7 @@ const Status: React.FC = () => {
       .catch((error) => {
         console.log('Error:', error);
       });
-  }, []);
+  }, [candidates, id]);
 
   const sendMenssageAndBack = useCallback(() => {
     handleMenssage();
