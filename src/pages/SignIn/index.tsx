@@ -30,7 +30,7 @@ const SignIn: React.FC = () => {
         </div>
         <Input>
           <span>Nome Social da Empresa</span>
-          <input placeholder="Fulano de tal" />
+          <input placeholder="Empresa XXXX" />
         </Input>
         <Input>
           <span>CNPJ</span>

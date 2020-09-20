@@ -101,7 +101,7 @@ export const CandidatesCard = styled.div`
       }
     }
 
-    > button {
+    > span {
       font-family: Archivo;
       font-size: 14px;
       font-style: normal;
@@ -118,5 +118,69 @@ export const CandidatesCard = styled.div`
     &:nth-child(2n + 1) {
       background: #fafafa;
     }
+  }
+`;
+
+export const Steps = styled.div`
+  display: flex;
+  padding: 0 30px;
+  justify-content: space-between;
+  align-items: center;
+
+  .left {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    width: 400px;
+
+    > strong {
+      margin-top: 13px;
+
+      font-family: Archivo;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 25px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #32264d;
+    }
+
+    > span {
+      font-family: Poppins;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 11px;
+      letter-spacing: 0em;
+      text-align: left;
+
+      color: #6a6180;
+    }
+  }
+
+  > span {
+    margin-left: auto;
+    margin-right: 20px;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 11px;
+    letter-spacing: 0em;
+    color: #6a6180;
+  }
+
+  > select {
+    height: 25px;
+    width: 90px;
+
+    font-family: Archivo;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
   }
 `;

@@ -5,17 +5,25 @@ import { useHistory } from 'react-router-dom';
 import { Container, Content, Header, Body, CandidatesCard } from './styles';
 
 const Candidates: React.FC = () => {
-  const { goBack } = useHistory();
+  const { goBack, push } = useHistory();
 
   const back = useCallback(() => {
     goBack();
   }, [goBack]);
 
-  // const goToLogin = useCallback(() => {
-  //   push('/login');
-  // }, [push]);
+  const goToCadidate = useCallback(
+    (id) => {
+      push(`/candidates/${id}`);
+    },
+    [push],
+  );
 
-  const candidates = [1, 2, 3, 4, 5, 6, 7];
+  const candidates = [
+    { name: 'Julia Stefano', telephone: '3387234976', index: 1 },
+    { name: 'Gabriel Pereira', telephone: '33991389938', index: 2 },
+    { name: 'João Vitor', telephone: '3387234976', index: 3 },
+    { name: 'Giovany Nogueira', telephone: '3387234976', index: 4 },
+  ];
 
   return (
     <Container>
@@ -27,14 +35,19 @@ const Candidates: React.FC = () => {
         <Content>
           <strong>Candidatos cadastrados</strong>
           <ul>
-            {candidates.map((index) => (
-              <CandidatesCard key={index}>
+            {candidates.map((item) => (
+              <CandidatesCard key={item.index}>
                 <li>
                   <div className="candidate">
-                    <span>Juia Stefano</span>
-                    <span className="telephone">23 - 9231342123</span>
+                    <span>{item.name}</span>
+                    <span className="telephone">{item.telephone}</span>
                   </div>
-                  <span>Dar Feedback</span>
+                  <button
+                    type="button"
+                    onClick={() => goToCadidate(item.index)}
+                  >
+                    Dar Feedback
+                  </button>
                 </li>
               </CandidatesCard>
             ))}
