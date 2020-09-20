@@ -1,8 +1,6 @@
-<h1 align="center"> 
-
-![Impetus logo](./.gitbhub/Impetus.png)
-
-</h1>
+<h2 align="center"> 
+<img alt="Impetus logo" title="#Impetus" src=".github/Impetus.png" width="250px" />
+</h2>
 
 <p align="center">
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Gabrielpdev/Impetus?style=flat-square&color=FF5844">
