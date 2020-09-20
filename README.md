@@ -1,6 +1,6 @@
 <h1 align="center"> 
 
-![Proffy Logo](https://lh4.googleusercontent.com/FBLUWLTkPBzbUTpib4HENn9cc0R4fv9Vd1oVVOJYhVqKqN0B9HSlYG4Be1GtMms3-sXkseo2fJtKQVaoi2o=w1366-h635)
+![Impetus logo](https://lh4.googleusercontent.com/FBLUWLTkPBzbUTpib4HENn9cc0R4fv9Vd1oVVOJYhVqKqN0B9HSlYG4Be1GtMms3-sXkseo2fJtKQVaoi2o=w1366-h635)
 
 </h1>
 
