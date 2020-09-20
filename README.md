@@ -1,6 +1,6 @@
 <h1 align="center"> 
 
-![Impetus logo](https://lh4.googleusercontent.com/FBLUWLTkPBzbUTpib4HENn9cc0R4fv9Vd1oVVOJYhVqKqN0B9HSlYG4Be1GtMms3-sXkseo2fJtKQVaoi2o=w1366-h635)
+![Impetus logo](./.gitbhub/Impetus.png)
 
 </h1>
 
@@ -43,6 +43,10 @@
 
 -  [Typescript](https://www.typescriptlang.org/)
 -  [ReactJS](https://reactjs.org/)
+-  [ESLint](https://eslint.org/)
+-  [Prettier](https://prettier.io/)
+-  [Styled-Components](https://styled-components.com/)
+-  [Axios](https://github.com/axios/axios)
 
 ## :arrow_forward: Rodando a aplicação
 
