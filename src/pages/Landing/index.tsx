@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import landingImg from '../../assets/landingImg.svg';
 import fireIcon from '../../assets/fireIcon.svg';
@@ -19,6 +20,16 @@ import {
 } from './styles';
 
 const SignIn: React.FC = () => {
+  const { push } = useHistory();
+
+  const goToLogin = useCallback(() => {
+    push('/login');
+  }, [push]);
+
+  const goToSign = useCallback(() => {
+    push('/cadastro');
+  }, [push]);
+
   return (
     <Container>
       <Home>
@@ -29,9 +40,16 @@ const SignIn: React.FC = () => {
           <LeftContent>
             <strong>Por um RH humanizado, rápido e inteligente.</strong>
             <span>Quer fazer parte dessa transformação ?</span>
-            <button type="button">
+            <button type="button" onClick={goToSign}>
               <span>Cadastre-se</span>
             </button>
+            <span>
+              Já faz parte ?{' '}
+              <button type="button" onClick={goToLogin}>
+                Entre
+              </button>{' '}
+              com seu login.
+            </span>
           </LeftContent>
           <img src={landingImg} alt="landingImg" />
         </LandingBody>

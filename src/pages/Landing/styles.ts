@@ -68,6 +68,22 @@ export const LeftContent = styled.div`
     letter-spacing: 0em;
     text-align: left;
     color: #6c6c80;
+
+    > button {
+      background: none;
+      border: 0;
+
+      margin-top: 10px;
+      font-family: Roboto;
+      font-size: 24px;
+      font-style: normal;
+      line-height: 38px;
+      letter-spacing: 0em;
+      font-weight: 700;
+      color: #583c9f;
+
+      cursor: pointer;
+    }
   }
 
   > button {
