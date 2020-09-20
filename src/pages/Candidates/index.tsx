@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 import { Container, Content, Header, Body, CandidatesCard } from './styles';
 
 const Candidates: React.FC = () => {
-  const { goBack, push } = useHistory();
+  const { goBack } = useHistory();
 
   const back = useCallback(() => {
     goBack();
