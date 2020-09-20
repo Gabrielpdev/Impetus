@@ -1,48 +1,50 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 
 import landingImg from '../../assets/landingImg.svg';
-import plans from '../../assets/plans.svg';
 
 import {
-  HomeBackGround,
+  Home,
   Container,
   Header,
-  HeaderNav,
+  LeftContent,
   LandingBody,
   Plans,
-  Cadastro,
+  Vantagens,
+  TitlePlans,
 } from './styles';
 
 const SignIn: React.FC = () => {
   return (
     <Container>
-      <HomeBackGround>
+      <Home>
         <Header>
           <strong>Impetus</strong>
-          <HeaderNav>
-            <NavLink to="">Home</NavLink>
-            <NavLink to="#planos">Planos</NavLink>
-            <NavLink to="">Sobre nós</NavLink>
-            <button type="button" onClick={() => {}} className="login">
-              Entrar
-            </button>
-          </HeaderNav>
         </Header>
         <LandingBody>
-          <strong>Por um RH humanizado, rápido e inteligente.</strong>
+          <LeftContent>
+            <strong>Por um RH humanizado, rápido e inteligente.</strong>
+            <span>Quer fazer parte dessa transformação</span>
+            <button type="button">
+              <span>Cadastre-se</span>
+            </button>
+          </LeftContent>
           <img src={landingImg} alt="landingImg" />
         </LandingBody>
-      </HomeBackGround>
+      </Home>
 
       <Plans>
-        <Cadastro>
-          <img src={plans} alt="plans" />
-          <div className="cadastrar">
-            <strong>Quer fazer parte dessa transformação?</strong>
-            <button type="button">Cadastre-se</button>
+        <Vantagens>
+          <div className="vantagem1">Baixo custo</div>
+          <div className="vantagem2">
+            Controle do processo seletivo a disposição do candidato
           </div>
-        </Cadastro>
+          <div className="vantagem3">Fácil gerenciamento</div>
+          <div className="vantagem4">
+            Praticidade tanto para empresa quanto para o candidato
+          </div>
+        </Vantagens>
+
+        <TitlePlans>Nossos planos</TitlePlans>
       </Plans>
     </Container>
   );
