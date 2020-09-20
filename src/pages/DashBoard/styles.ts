@@ -11,7 +11,7 @@ export const Container = styled.div`
 export const Header = styled.header`
   width: 100%;
   height: 350px;
-  background: #f0f0f5;
+  background: #cfbaff;
 
   padding: 90px 219px;
 

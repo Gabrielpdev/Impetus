@@ -2,69 +2,44 @@ import React, { useCallback } from 'react';
 import { FiArrowLeft } from 'react-icons/fi';
 import { useHistory } from 'react-router-dom';
 
-import SignInImg from '../../assets/SignInImg.svg';
-
-import { Container, Header, Body, CardsCandidate } from './styles';
+import { Container, Content, Header, Body, CandidatesCard } from './styles';
 
 const Candidates: React.FC = () => {
-  // const { goBack, push } = useHistory();
+  const { goBack, push } = useHistory();
 
-  // const back = useCallback(() => {
-  //   goBack();
-  // }, [goBack]);
+  const back = useCallback(() => {
+    goBack();
+  }, [goBack]);
 
   // const goToLogin = useCallback(() => {
   //   push('/login');
   // }, [push]);
 
+  const candidates = [1, 2, 3, 4, 5, 6, 7];
+
   return (
     <Container>
       <Header>
-        <button type="button">Cadastrar vaga</button>
-        <button type="button">Cadastrar template</button>
+        <FiArrowLeft size={20} onClick={back} />
       </Header>
 
       <Body>
-        <CardsCandidate>
-          <strong className="title">Desenvolvedor frontend</strong>
-          <span className="subtitle">PJ, remoto</span>
-          <span className="bio">
-            Atuar como desenvolvedor frontend lidando diretamente com demandas
-            que exigem senso de urgência e agilidade. Requisitos básicos para a
-            vaga:
-          </span>
-          <ul className="habilites">
-            <li>React</li>
-            <li>VueJs</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JS</li>
+        <Content>
+          <strong>Candidatos cadastrados</strong>
+          <ul>
+            {candidates.map((index) => (
+              <CandidatesCard key={index}>
+                <li>
+                  <div className="candidate">
+                    <span>Juia Stefano</span>
+                    <span className="telephone">23 - 9231342123</span>
+                  </div>
+                  <span>Dar Feedback</span>
+                </li>
+              </CandidatesCard>
+            ))}
           </ul>
-          <footer>
-            <span>Disponível</span>
-            <button type="button">Ver candidatos</button>
-          </footer>
-        </CardsCandidate>
-        <CardsCandidate>
-          <strong className="title">Desenvolvedor frontend</strong>
-          <span className="subtitle">PJ, remoto</span>
-          <span className="bio">
-            Atuar como desenvolvedor frontend lidando diretamente com demandas
-            que exigem senso de urgência e agilidade. Requisitos básicos para a
-            vaga:
-          </span>
-          <ul className="habilites">
-            <li>React</li>
-            <li>VueJs</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JS</li>
-          </ul>
-          <footer>
-            <span>Disponível</span>
-            <button type="button">Ver candidatos</button>
-          </footer>
-        </CardsCandidate>
+        </Content>
       </Body>
     </Container>
   );

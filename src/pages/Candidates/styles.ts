@@ -11,143 +11,111 @@ export const Container = styled.div`
 export const Header = styled.header`
   width: 100%;
   height: 350px;
-  background: #f0f0f5;
+  background: #cfbaff;
 
   padding: 90px 219px;
 
   display: flex;
   align-items: center;
-  justify-content: flex-end;
 
-  button {
-    height: 40px;
-    width: 206px;
-    border-radius: 8px;
-    background: #8257e5;
-    border: 0;
-    color: #fff;
+  > svg {
+    background: #fff;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 
-    font-family: Ubuntu;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 18px;
-    letter-spacing: 0em;
+    margin-right: auto;
 
-    margin-left: 15px;
-    margin-top: -20px;
+    cursor: pointer;
   }
 `;
 
 export const Body = styled.body`
-  width: 69%;
+  width: 100%;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  padding: 0 220px;
 `;
 
-export const CardsCandidate = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  height: 83%;
-  width: 48%;
+export const Content = styled.div`
+  /* width: 100%; */
+  background: #fff;
+  margin-top: -70px;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
   border-radius: 8px;
 
-  background: #ffffff;
-  border: 1px solid #edebeb;
-  box-sizing: border-box;
-
-  margin-top: -40px;
-
   > strong {
-    margin-top: 20px;
-    margin-left: 20px;
-
     font-family: Archivo;
-    font-size: 15px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: 25px;
     letter-spacing: 0em;
-    color: #32264d;
+
+    display: block;
+    margin: 20px 0 20px 20px;
   }
+`;
 
-  > span {
-    margin: 0 20px;
-
-    font-family: Poppins;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: 0em;
-
-    color: #6a6180;
-  }
-
-  .subtitle {
-    margin-bottom: 10px;
-  }
-
-  .habilites {
-    margin-top: 10px;
-  }
+export const CandidatesCard = styled.div`
+  display: flex;
 
   li {
-    font-family: Poppins;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: 0em;
-    text-align: left;
+    list-style-type: none;
+    width: 100%;
+    background: #fff;
 
-    margin-left: 40px;
-
-    color: #6a6180;
-
-    &:last-child {
-      margin-bottom: 10px;
-    }
-  }
-
-  footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    margin-top: auto;
-    height: 65px;
-    width: 100%;
-    padding: 0 10%;
+    padding: 20px;
 
-    background: #fafafc;
-    border: 1px solid #e6e6f0;
-    box-sizing: border-box;
-    border-radius: 0px 0px 8px 8px;
+    > div {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
 
-    font-family: Archivo;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 26px;
-    letter-spacing: 0em;
-    color: #8257e5;
+      span {
+        font-family: Archivo;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-align: left;
 
-    > button {
-      height: 30px;
-      width: 125px;
-      border: 0;
-      background: #8257e5;
-      border-radius: 4px;
+        color: #32264d;
+      }
 
+      .telephone {
+        font-family: Archivo;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 10px;
+        color: rgba(50, 38, 77, 0.6);
+      }
+    }
+
+    > span {
       font-family: Archivo;
-      font-size: 10px;
+      font-size: 14px;
       font-style: normal;
       font-weight: 700;
       line-height: 26px;
       letter-spacing: 0em;
-      color: #fff;
+      text-align: left;
+
+      cursor: pointer;
+      color: #8257e5;
+    }
+
+    &:nth-child(2n + 1) {
+      background: #fafafa;
     }
   }
 `;
