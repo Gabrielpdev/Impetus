@@ -12,7 +12,7 @@ import {
 } from './styles';
 
 const Status: React.FC = () => {
-  const { goBack, push } = useHistory();
+  const { goBack } = useHistory();
   const { id } = useParams();
 
   const back = useCallback(() => {
@@ -82,6 +82,9 @@ const Status: React.FC = () => {
               </Steps>
             ))}
           </ul>
+          <button type="button" className="saveButton" onClick={back}>
+            Salvar
+          </button>
         </Content>
       </Body>
     </Container>

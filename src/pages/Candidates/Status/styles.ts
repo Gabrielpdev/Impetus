@@ -40,12 +40,14 @@ export const Body = styled.body`
 `;
 
 export const Content = styled.div`
-  /* width: 100%; */
   background: #fff;
   margin-top: -70px;
   margin-bottom: 30px;
   padding-bottom: 10px;
   border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
 
   > strong {
     font-family: Archivo;
@@ -57,6 +59,20 @@ export const Content = styled.div`
 
     display: block;
     margin: 20px 0 20px 20px;
+  }
+
+  .saveButton {
+    margin: 40px 30px 20px auto;
+    font-family: Archivo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0em;
+
+    border: 0;
+    background: none;
+    color: #8257e5;
   }
 `;
 
