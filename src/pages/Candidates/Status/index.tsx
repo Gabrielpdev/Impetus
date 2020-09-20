@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useCallback } from 'react';
 import { FiArrowLeft } from 'react-icons/fi';
 import { useHistory, useParams } from 'react-router-dom';
@@ -15,15 +16,11 @@ const Status: React.FC = () => {
   const { goBack } = useHistory();
   const { id } = useParams();
 
-  const back = useCallback(() => {
-    goBack();
-  }, [goBack]);
-
   const candidates = [
-    { name: 'Julia Stefano', telephone: '3387234976', index: 1 },
-    { name: 'Gabriel Pereira', telephone: '33991389938', index: 2 },
-    { name: 'João Vitor', telephone: '3387234976', index: 3 },
-    { name: 'Giovany Nogueira', telephone: '3387234976', index: 4 },
+    { name: 'Julia Stefano', telephone: '5513997747643', index: 1 },
+    { name: 'Gabriel Pereira', telephone: '5533991389938', index: 2 },
+    { name: 'João Vitor', telephone: '5561982716101', index: 3 },
+    { name: 'Giovany Nogueira', telephone: '5535998240998', index: 4 },
   ];
   const steps = [
     {
@@ -41,6 +38,43 @@ const Status: React.FC = () => {
       index: 2,
     },
   ];
+
+  const back = useCallback(() => {
+    goBack();
+  }, [goBack]);
+
+  const handleMenssage = useCallback(() => {
+    axios
+      .post(
+        'https://api.zenvia.com/v1/channels/whatsapp/messages',
+        {
+          from: 'spangled-temperature',
+          to: candidates[id - 1].telephone,
+          contents: [
+            {
+              type: 'text',
+              text: `Parabéns, você passou para a próxima etapa do processo seletivo da empresa Zenvia.\nVocê está agora na etapa de:\nEntrevista com o gestor e seu status é:\nAguardado candidato.\n\nLembre-se qualquer coisa é só me chamar.`,
+            },
+          ],
+        },
+        {
+          headers: {
+            'X-API-TOKEN': process.env.REACT_APP_KEY_API,
+          },
+        },
+      )
+      .then((response) => {
+        console.log('Response:', response);
+      })
+      .catch((error) => {
+        console.log('Error:', error);
+      });
+  }, []);
+
+  const sendMenssageAndBack = useCallback(() => {
+    handleMenssage();
+    goBack();
+  }, []);
 
   return (
     <Container>
@@ -82,7 +116,11 @@ const Status: React.FC = () => {
               </Steps>
             ))}
           </ul>
-          <button type="button" className="saveButton" onClick={back}>
+          <button
+            type="button"
+            className="saveButton"
+            onClick={sendMenssageAndBack}
+          >
             Salvar
           </button>
         </Content>
