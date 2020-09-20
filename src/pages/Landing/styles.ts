@@ -59,6 +59,7 @@ export const LeftContent = styled.div`
     color: #1d2a30, 100%;
   }
   > span {
+    margin-top: 10px;
     font-family: Roboto;
     font-size: 24px;
     font-style: normal;
@@ -202,4 +203,65 @@ export const TitlePlans = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+export const CardPlans = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 879px;
+  margin: 85px auto;
+`;
+
+export const Card = styled.div`
+  height: 391px;
+  width: 267px;
+  border-radius: 8px;
+  background: #dfd1ea;
+  border: 1px solid #765cb4;
+  box-sizing: border-box;
+  border-radius: 8px;
+  color: #6c6c80;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 25px;
+
+  > strong {
+    font-family: Ubuntu;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  > span {
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+
+  > button {
+    width: 201px;
+    height: 47px;
+
+    background: #583c9f;
+    border-radius: 8px;
+    border: none;
+
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    color: #fff;
+  }
 `;
