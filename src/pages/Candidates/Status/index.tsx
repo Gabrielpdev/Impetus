@@ -26,14 +26,13 @@ const Status: React.FC = () => {
     {
       title: 'Etapa 1',
       description:
-        'Atuar como desenvolvedor frontend lidando diretamente com demandas que exigem senso de urgência e agilidade.',
+        'Etapa de analise de portefólio e de currículo, sem entrevista.',
       date: '29/10/2020',
       index: 1,
     },
     {
       title: 'Etapa 2',
-      description:
-        'Atuar como desenvolvedor frontend lidando diretamente com demandas que exigem senso de urgência e agilidade.',
+      description: 'Etapa de entrevista com o gestor na área desejada.',
       date: '29/10/2020',
       index: 2,
     },

@@ -15,7 +15,46 @@ const DashBoard: React.FC = () => {
     goBack();
   }, [goBack]);
 
-  const tipos = [1, 2, 3];
+  const tipos = [
+    {
+      title: 'Desenvolvedor frontend',
+      subtitle: 'PJ, remoto',
+      bio:
+        'Atuar como desenvolvedor frontend lidando diretamente com demandas que exigem senso de urgência e agilidade. Requisitos básicos par  a vaga',
+      habilites: [
+        { index: 1, name: 'ReactJs' },
+        { index: 1, name: 'VueJs' },
+        { index: 1, name: 'CSS' },
+        { index: 1, name: 'HTML' },
+      ],
+      index: 1,
+    },
+    {
+      title: 'Desenvolvedor backend',
+      subtitle: 'PJ, remoto',
+      bio:
+        'Atuar como desenvolvedor backend lidando diretamente com demandas que exigem senso de urgência e agilidade. Requisitos básicos par  a vaga',
+      habilites: [
+        { index: 1, name: 'JS' },
+        { index: 1, name: 'NodeJs' },
+        { index: 1, name: 'MongoDB' },
+        { index: 1, name: 'Postgres' },
+      ],
+      index: 2,
+    },
+    {
+      title: 'Desenvolvedor mobile',
+      subtitle: 'PJ, remoto',
+      bio:
+        'Atuar como desenvolvedor mobile lidando diretamente com demandas que exigem senso de urgência e agilidade. Requisitos básicos par  a vaga',
+      habilites: [
+        { index: 1, name: 'React-Native' },
+        { index: 1, name: 'Swift' },
+        { index: 1, name: 'JS' },
+      ],
+      index: 3,
+    },
+  ];
 
   return (
     <Container>
@@ -27,21 +66,15 @@ const DashBoard: React.FC = () => {
       </Header>
 
       <Body>
-        {tipos.map((index) => (
-          <CardsCandidate key={index}>
-            <strong className="title">Desenvolvedor frontend</strong>
-            <span className="subtitle">PJ, remoto</span>
-            <span className="bio">
-              Atuar como desenvolvedor frontend lidando diretamente com demandas
-              que exigem senso de urgência e agilidade. Requisitos básicos para
-              a vaga:
-            </span>
+        {tipos.map((item) => (
+          <CardsCandidate key={item.index}>
+            <strong className="title">{item.title}</strong>
+            <span className="subtitle">{item.subtitle}</span>
+            <span className="bio">{item.bio} </span>
             <ul className="habilites">
-              <li>React</li>
-              <li>VueJs</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JS</li>
+              {item.habilites.map((hability) => (
+                <li key={hability.index}>{hability.name}</li>
+              ))}
             </ul>
             <footer>
               <span>Disponível</span>
@@ -51,28 +84,6 @@ const DashBoard: React.FC = () => {
             </footer>
           </CardsCandidate>
         ))}
-        {/* <CardsCandidate>
-          <strong className="title">Desenvolvedor frontend</strong>
-          <span className="subtitle">PJ, remoto</span>
-          <span className="bio">
-            Atuar como desenvolvedor frontend lidando diretamente com demandas
-            que exigem senso de urgência e agilidade. Requisitos básicos para a
-            vaga:
-          </span>
-          <ul className="habilites">
-            <li>React</li>
-            <li>VueJs</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JS</li>
-          </ul>
-          <footer>
-            <span>Disponível</span>
-            <button type="button" onClick={goToCandidates}>
-              Ver candidatos
-            </button>
-          </footer>
-        </CardsCandidate> */}
       </Body>
     </Container>
   );
